@@ -8,7 +8,7 @@ export function getCreatedTag(): string | null {
     return null
   }
 
-  if (github.context.payload.ref_type != 'tag') {
+  if (github.context.payload.ref_type !== 'tag') {
     core.info(`The created reference was a branch, not a tag`)
     return null
   }
