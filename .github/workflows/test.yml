@@ -17,5 +17,7 @@ jobs:
       - name: Create a release draft
         id: create-release-draft
         uses: ./
+        with:
+          milliseconds: 1000
       - name: Print the URL of the release draft
         run: echo ${{ steps.create-release-url-draft.outputs.release-url }}
