@@ -45,7 +45,8 @@ export async function getPreviousVersionTag(
 // getCommitMessageBetween()
 
 export async function getCommitMessagesBetween(
-  firstTag: string
+  firstTag: string,
+  secondTag: string
 ): Promise<string> {
   let commitMessages = ''
 
