@@ -13,7 +13,7 @@ export async function createReleaseDraft(
   const response = await octokit.repos.createRelease({
     owner: github.context.repo.owner,
     repo: github.context.repo.repo,
-    tag_name: versionTag,
+    tag_name: versionTag, // eslint-disable-line @typescript-eslint/camelcase
     name: version.removePrefix(versionTag),
     body: markdown.toUnorderedList(changelog),
     prerelease: version.isPrelease(versionTag),
